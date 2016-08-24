@@ -31,7 +31,7 @@ const CustomerForm = React.createClass({
           <input type="text" className="table-data name" value={this.state.name} onChange={this.update("name")}></input>
           <input type="text" className="table-data location" value={this.state.location} onChange={this.update("location")}></input>
           <input type="text" className="table-data age" value={this.state.age} onChange={this.update("age")}></input>
-          <input type="submit" value="Submit"></input>
+          <input className='inline-submit' type="submit" value="Submit"></input>
         </form>
       </div>
     );

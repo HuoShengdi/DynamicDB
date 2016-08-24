@@ -40,6 +40,40 @@
   font-weight: bold;
 }
 
+.inline-submit {
+  position: absolute;
+  top: 5px;
+  left: calc(100% + 5px);
+}
+
+.inline-form .table-data {
+  color: #117;
+  font-size: 17px;
+}
+
+.table-header > * {
+  background-color: #f0f0f0;
+}
+
+.table-body > :nth-child(even){
+  background-color: #e0e0ee;
+}
+
+.table-body > :nth-child(odd){
+  background-color: #eeeefd;
+}
+
+.table-row {
+  display: inline-block;
+  position: relative;
+}
+
+.table-row button {
+  position: absolute;
+  top: 5px;
+  left: calc(100% + 5px);
+}
+
 .table-data, .column-name {
   padding: 5px;
   width: 220px;
