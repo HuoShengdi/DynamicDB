@@ -10,6 +10,9 @@ const CustomerTable = React.createClass({
   componentDidMount(){
     this.queryCustomers(this.props.searchParams);
   },
+  componentWillReceiveProps(props){
+    this.queryCustomers(props.searchParams);
+  },
   queryCustomers(params){
     ApiUtils.searchQuery(params, this.setCustomers);
   },
@@ -18,18 +21,12 @@ const CustomerTable = React.createClass({
   },
   render () {
     const customerEntries = this.state.customers.map((customer)=>{
-      return (<tr><TableEntry customer={customer} key={customer.id}/></tr>);
+      return (<TableEntry customer={customer} key={customer.id}/>);
     });
     return (
       <div>
-        <table>
-          <thead>
-            <TableColumns/>
-          </thead>
-          <tbody>
-            {customerEntries}
-          </tbody>
-        </table>
+        <TableColumns/>
+        {customerEntries}
       </div>
     );
   }

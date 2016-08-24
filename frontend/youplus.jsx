@@ -11,6 +11,8 @@ const Youplus = (
 );
 
 document.addEventListener("DOMContentLoaded", ()=>{
+  const tableRefresh = new Event('tablerefresh', {'bubbles':true});
   const root = document.getElementById('content');
+  window.tablerefresh = tableRefresh;
   ReactDOM.render(Youplus, root);
 });

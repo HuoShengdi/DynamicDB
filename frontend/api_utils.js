@@ -3,9 +3,11 @@ const ApiUtils = {
     let queryString = "";
     if (params){
       queryString = "?";
+      const paramArr = [];
       Object.keys(params).forEach((key)=>{
-        queryString += `search[${key}]=${params[key]}`;
+        paramArr.push(`search[${key}]=${params[key]}`);
       });
+      queryString += paramArr.join("&");
     }
     $.ajax({
         url: "/customers" + queryString,
