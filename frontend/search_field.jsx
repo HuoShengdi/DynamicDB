@@ -31,11 +31,11 @@ const SearchField = React.createClass({
       <div className='search-field' data-value={this.state.value}>
         <form onSubmit={this.handleSubmit}>
           <label>
-            {StringUtils.capitalize(this.props.fieldName)}
+            {StringUtils.capitalize(this.props.fieldName) + ": "}
           </label>
           <input type='text' value={this.state.value} onChange={this.handleChange}></input>
         </form>
-        <button onClick={this.props.handleFieldDelete}>X</button>
+        <button onClick={this.props.handleFieldDelete}>Clear</button>
       </div>
     );
   }

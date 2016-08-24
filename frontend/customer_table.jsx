@@ -24,9 +24,11 @@ const CustomerTable = React.createClass({
       return (<TableEntry customer={customer} key={customer.id}/>);
     });
     return (
-      <div>
+      <div id='customer-table'>
         <TableColumns/>
-        {customerEntries}
+        <div className='table-body'>
+          {customerEntries}
+        </div>
       </div>
     );
   }

@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
     @customers = Customer.all
     if params[:search]
       search_params.each_pair do |key, value|
-        @customers = @customers.where("#{key} ~* ?","#{value}")
+        @customers = @customers.where("CAST(#{key} as varchar(10)) ~* ?","#{value}")
       end
     end
   end

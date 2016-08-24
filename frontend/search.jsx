@@ -48,7 +48,7 @@ const Search = React.createClass({
       }
     });
     const fieldSelector = (
-      <select defaultValue="" onChange={this.handleFieldClick}>
+      <select id='selector' defaultValue="" onChange={this.handleFieldClick}>
         <option value="">-- Filter By --</option>
         {fieldOptions}
       </select>);
@@ -64,7 +64,10 @@ const Search = React.createClass({
     return (
       <div>
         <div id="search-pane">
-          {fieldSelector}
+          <div id='selector-wrapper'>
+            {"Select Filter:"}
+            {fieldSelector}
+          </div>
           {activeFieldItems}
         </div>
         <CustomerTable searchParams={this.state.params}/>

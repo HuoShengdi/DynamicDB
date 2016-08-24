@@ -6,7 +6,6 @@ const SearchStore = {
   },
   deleteParam(key){
     delete _params[key];
-    console.log(_params);
   },
   getParams(){
     return Object.assign({}, _params);

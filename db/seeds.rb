@@ -6,8 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-joe = {name: 'Joe', location: 'California', age: 23}
-lana = {name: 'Lana', location: 'Texas', age: 65}
-tam = {name: 'Tam', location: 'Wyoming', age: 41}
-
-Customer.create([joe, lana, tam])
+50.times do
+  Customer.create({name: Faker::Name.first_name, location: Faker::Address.state, age: (rand(50)+18)} )
+end

@@ -22,8 +22,10 @@ const TableColumns = React.createClass({
       }
     });
     return (
-      <div>
-        {columnNames}
+      <div className='table-header'>
+        <div className='table-row'>
+          {columnNames}
+        </div>
       </div>
     );
   }

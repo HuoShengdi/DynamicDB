@@ -4,8 +4,8 @@ import Search from './search';
 import ReactDOM from 'react-dom';
 
 const Youplus = (
-      <div>
-        <h1>Customers</h1>
+      <div id='main'>
+        <h1 id='page-title'>Customers</h1>
         <Search/>
       </div>
 );

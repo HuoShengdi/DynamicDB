@@ -27,7 +27,7 @@ const ApiUtils = {
 
   updateCustomer(formData, success){
     $.ajax({
-        url: "/customers/" + formData.id,
+        url: "/customers/" + formData.customer.id,
         type: "PATCH",
         data: formData,
         success

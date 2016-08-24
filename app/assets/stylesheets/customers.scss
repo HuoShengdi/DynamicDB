@@ -1,3 +1,48 @@
 // Place all the styles related to the Customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#main h1{
+  text-align: center;
+}
+
+#search-pane {
+  padding: 20px;
+}
+
+#selector{
+  margin: 10px;
+}
+
+#customer-table{
+  padding: 20px;
+}
+
+.search-field > form {
+  display: inline-block;
+  margin: 5px;
+}
+
+.search-field label {
+  width: 100px;
+  display: inline-block;
+}
+
+.column-name{
+  font-weight: bold;
+}
+
+.table-data, .column-name {
+  padding: 5px;
+  width: 220px;
+  display: inline-block;
+  border: 1px solid #000;
+}
